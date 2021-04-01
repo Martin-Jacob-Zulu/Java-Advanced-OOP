@@ -1,17 +1,17 @@
 package polymorphism;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	// Properties
 	
-	
-	private int numDoors = 2;
-	private String color = "";
-	private String make = "";
-	private String model = "";
-	private String year = "";
-	private float speed = 0;
-	final int MAX_SPEED = 40;
+	protected int runWheels = 4;
+	protected int numDoors = 2;
+	protected String color = "";
+	protected String make = "";
+	protected String model = "";
+	protected String year = "";
+	protected float speed = 0;
+	final int MAX_SPEED = 260;
 	
 	// Getters
 	
@@ -57,24 +57,46 @@ public class Vehicle {
 		return this.speed;
 	}
 
-	// Constructor
+	// Constructors
 	public Vehicle() {
 		
 	}
-
-	public void  accelerate(){
-		this.speed += 4;
-		if (this.speed >= this.MAX_SPEED) {
-			this.speed = this.MAX_SPEED;
-		}
+	
+	public Vehicle(int wheels, float speed, int doors, String color, String make, String model, String year) {
+		this.color = color;
+		this.make = make;
+		this.model = model;
+		this.speed = speed;
+		this.year = year;
+		this.numDoors = doors;
+		this.runWheels = wheels;
 	}
 	
-	public void decelerate() {
-		this.speed -= 6;
-		if (this.speed <= 0) {
-			this.speed = 0;
-		}
+	public Vehicle(float speed, String color, String make, String model, String year) {
+		this.color = color;
+		this.make = make;
+		this.model = model;
+		this.speed = speed;
+		this.year = year;
 	}
+
+	public abstract void  accelerate();
+	
+//	public abstract void  accelerate(){
+//		this.speed += 4;
+//		if (this.speed >= this.MAX_SPEED) {
+//			this.speed = this.MAX_SPEED;
+//		}
+//	}
+	
+	public abstract void decelerate();
+	
+//	public abstract void decelerate() {
+//		this.speed -= 6;
+//		if (this.speed <= 0) {
+//			this.speed = 0;
+//		}
+//	}
 	
 	public void turnLeft() {
 		System.out.println("Turning Left");
