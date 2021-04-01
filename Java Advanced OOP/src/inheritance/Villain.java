@@ -11,5 +11,9 @@ public class Villain extends Hero {
 	public void steal() {
 		System.out.println(this.name + " is Stealing");
 	}
+	
+	public void kill() {
+		System.out.println(this.name + " is killing");
+	}
 
 }

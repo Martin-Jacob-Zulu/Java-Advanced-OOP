@@ -1,11 +1,11 @@
 package inheritance;
 
-public class Hero {
+public class Hero extends Entity {
 
 	//==============================PRIVATE PROPERTIES=============================
-	private int speed;
+	protected int speed;
 	private int health;
-	private int strength;
+	protected int strength;
 	
 	//===============================PUBLIC PROPERTIES==============================
 	public String name;
@@ -13,6 +13,10 @@ public class Hero {
 	// ================================GETTERS=====================================
 	public int getSpeed() {
 		return speed;
+	}
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
 	public int getHealth() {

@@ -16,6 +16,14 @@ public class HeroDemo {
 		slyMan.fight();
 		slyMan.run();
 		slyMan.showAbilities();
+		
+		// Instantiate Vigilante
+		Vigilante msSavage = new Vigilante("Ms Savage");
+		msSavage.kill();
+		msSavage.dealsJustice();
+		msSavage.fight();
+		msSavage.fight();
+		msSavage.showAbilities();
 	}
 
 }
